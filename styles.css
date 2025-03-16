@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Unbounded', 'Arial', sans-serif;
+    background: #000;
+    color: orangered;
+    overflow-x: hidden;
+}
+
+/* Анімація букв */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: rise 0.8s forwards;
+}
+
+@keyframes rise {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Глобальна анімація появи */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: appear 1.5s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Навігація */
+header {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid orangered;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: orangered;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Hero */
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    background: url('https://source.unsplash.com/1600x600/?dark,cafe') no-repeat center/cover;
+    color: orangered;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Контент */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Меню */
+.menu-item {
+    margin-bottom: 20px;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: orangered;
+}
+
+.menu-item p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Послуги */
+.service-item {
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    color: orangered;
+}
+
+.service-item p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Відгуки */
+.review-item {
+    margin-bottom: 20px;
+}
+
+.review-item h3 {
+    font-size: 1.5rem;
+    color: orangered;
+}
+
+.review-item p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 30px 20px;
+    margin-top: 20px;
+    border-top: 2px solid orangered;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-flex .left, .footer-flex .right {
+    width: 45%;
+    min-width: 250px;
+}
+
+/* Списки */
+ul.phones, ul.social {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul.phones li, ul.social li {
+    margin-bottom: 5px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+ul.social a {
+    color: orangered;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+ul.social a:hover, ul.phones li:hover {
+    color: white;
+    transform: translateX(10px);
+}
+
+/* Email */
+a {
+    color: orangered;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: white;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-flex .left, .footer-flex .right {
+        width: 100%;
+        text-align: center;
+    }
+}
